@@ -51,21 +51,24 @@ public class PlayerController : MonoBehaviour
 				jump = true;
 			}
 
-			float direccion = Input.GetAxis("Horizontal");
+			
 
 
-			myRigidbody2D.AddForce(Vector2.right * speed * direccion);
+
 
 			// Clamp toma un valor y le aplica un filtro (un valor mínimo y un valor máximo)
 			float limiteVelocidad = Mathf.Clamp(myRigidbody2D.velocity.x, -maxSpeed, maxSpeed);
 			myRigidbody2D.velocity = new Vector2(limiteVelocidad, myRigidbody2D.velocity.y);
 
-			if (direccion > 0.1f)
+		if (Input.GetKey(KeyCode.RightArrow))
 			{
 				transform.localScale = new Vector3(1f, 1f, 1f);
+			myRigidbody2D.AddForce(Vector2.right * speed * 1);
+
 			}
-			if (direccion < -0.1f)
+		if (Input.GetKey(KeyCode.LeftArrow))
 			{
+			myRigidbody2D.AddForce(Vector2.left* speed * 1);
 				transform.localScale = new Vector3(-1f, 1f, 1f);
 			}
 

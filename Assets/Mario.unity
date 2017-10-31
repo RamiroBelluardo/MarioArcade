@@ -5058,7 +5058,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5156,11 +5156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
-  speed: 5
+  speed: 4
   tocandoPiso: 0
-  fuerzaSalto: 3.7
+  fuerzaSalto: 5.1
   endPoint: 0
-  myRigidbody2D: {fileID: 0}
+  myRigidbody2D: {fileID: 1624141083}
 --- !u!95 &1624141088
 Animator:
   serializedVersion: 3
