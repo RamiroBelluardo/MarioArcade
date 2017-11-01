@@ -485,6 +485,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1092581865971254, guid: 28b864917bd5e594c924671273c9130f, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b864917bd5e594c924671273c9130f, type: 2}
   m_IsPrefabParent: 0
@@ -4466,7 +4470,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430982515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: -0.95, z: -10}
+  m_LocalPosition: {x: -2.231, y: -0.899, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5138,7 +5142,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624141082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1508472, y: -0.603, z: 0}
+  m_LocalPosition: {x: -0.8802, y: -0.795, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6252,6 +6256,24 @@ Transform:
   m_PrefabParentObject: {fileID: 4872670885906988, guid: 6921d0a7a788361469503fd580738bc3,
     type: 2}
   m_PrefabInternal: {fileID: 1498124572}
+--- !u!1 &2002488077 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1092581865971254, guid: 28b864917bd5e594c924671273c9130f,
+    type: 2}
+  m_PrefabInternal: {fileID: 145582510}
+--- !u!114 &2002488081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2002488077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbb89fc6abc0eb42be6418db205bb1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 21300012, guid: 88bed16d42f774f479475807bcb6aa49, type: 3}
+  sprite2: {fileID: 21300014, guid: 88bed16d42f774f479475807bcb6aa49, type: 3}
 --- !u!4 &2006614934 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4388183294359298, guid: a1bc4bb4ee3961049886e337ea16797f,

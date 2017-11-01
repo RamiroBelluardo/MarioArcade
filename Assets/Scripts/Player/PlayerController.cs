@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 		{
 		
 				Movement();
+				CheckBounds ();
 				
 			}
 
@@ -97,7 +98,15 @@ public class PlayerController : MonoBehaviour
 
 		}
 
+	void CheckBounds(){
+
+		if (transform.position.x < -3.9199f) {
+			transform.position = new Vector2 (-0.8802f, transform.position.y);
+		}
+		if (transform.position.x > -0.8802f) {
+			transform.position = new Vector2 (-3.9199f, transform.position.y);
+		}
 
 
-
+	}
 	}
