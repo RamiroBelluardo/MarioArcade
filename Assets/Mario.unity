@@ -487,7 +487,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1092581865971254, guid: 28b864917bd5e594c924671273c9130f, type: 2}
       propertyPath: m_TagString
-      value: Player
+      value: PowerUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b864917bd5e594c924671273c9130f, type: 2}
@@ -5043,7 +5043,7 @@ GameObject:
   - component: {fileID: 1624141087}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,6 +7,7 @@ public class PowerScript : MonoBehaviour {
 	public Sprite sprite2;
 
 
+
 	private PowerScript power;
 
 		// Use this for initialization
@@ -15,24 +16,27 @@ public class PowerScript : MonoBehaviour {
 
 		}
 	// Use this for initialization
-	private void OnColliderEnter2D(Collider2D col)
+	private void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag == "Player")
 		{
-			changeTheSprite ();
-		}
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer> ();
+			if (spriteRenderer.sprite == sprite1) {
+				spriteRenderer.sprite = sprite2;
+			} else {
+				if (spriteRenderer.sprite == sprite2) {
+					spriteRenderer.sprite = null;
+				} else {
+					if (spriteRenderer.sprite == null) {
+						
+					}	else{
+					spriteRenderer.sprite = sprite1;
 
-
-	}
-	void changeTheSprite(){
-
-		if (power.GetComponent<SpriteRenderer>().sprite== sprite1) {
-			power.GetComponent<SpriteRenderer>().sprite= sprite1 = sprite2;
-		} else {
-			power.GetComponent<SpriteRenderer>().sprite= sprite1;
-
-	}
-	}
-	
-
+				}
+					
+}	
 }
+}
+
+	}
+}
+
