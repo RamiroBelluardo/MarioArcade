@@ -1498,26 +1498,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 68956272380007780, guid: a1bc4bb4ee3961049886e337ea16797f,
-        type: 2}
-      propertyPath: m_Points.Array.data[1].y
-      value: -0.03815451
-      objectReference: {fileID: 0}
-    - target: {fileID: 68956272380007780, guid: a1bc4bb4ee3961049886e337ea16797f,
-        type: 2}
-      propertyPath: m_Points.Array.data[1].x
-      value: 0.011293316
-      objectReference: {fileID: 0}
-    - target: {fileID: 68956272380007780, guid: a1bc4bb4ee3961049886e337ea16797f,
-        type: 2}
-      propertyPath: m_Points.Array.data[0].x
-      value: -0.01468873
-      objectReference: {fileID: 0}
-    - target: {fileID: 68956272380007780, guid: a1bc4bb4ee3961049886e337ea16797f,
-        type: 2}
-      propertyPath: m_Points.Array.data[0].y
-      value: -0.03815451
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1bc4bb4ee3961049886e337ea16797f, type: 2}
   m_IsPrefabParent: 0
@@ -5234,7 +5214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1624141087
 MonoBehaviour:
