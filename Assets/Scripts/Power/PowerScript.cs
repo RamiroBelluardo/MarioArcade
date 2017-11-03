@@ -17,7 +17,7 @@ public class PowerScript : MonoBehaviour {
 				spriteRenderer.sprite = sprite2;
 			} else {
 				if (spriteRenderer.sprite == sprite2) {
-					//spriteRenderer.sprite = null;
+					
 					Destroy (this.gameObject);
 
 					}	else{
