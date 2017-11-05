@@ -15,20 +15,30 @@ public class PowerScript : MonoBehaviour {
 			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer> ();
 			if (spriteRenderer.sprite == sprite1) {
 				spriteRenderer.sprite = sprite2;
+				allArounds ();
 			} else {
 				if (spriteRenderer.sprite == sprite2) {
-					
+					allArounds ();
 					Destroy (this.gameObject);
 
 					}	else{
 					spriteRenderer.sprite = sprite1;
+					allArounds ();
 
 				}
 					
 }	
 }
 }
+	private void  allArounds(){
 
+		GameObject[] enemyAll=GameObject.FindGameObjectsWithTag("Enemy");
+
+		foreach(GameObject enemy in enemyAll) {
+			enemy.SendMessage ("Around");
+		}
 	}
+	}
+
 
 

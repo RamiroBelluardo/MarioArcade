@@ -99,7 +99,7 @@ public class EnemyController : MonoBehaviour {
 	}
 		
 	IEnumerator tiempo (){
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (5f);
 		isAround = false;
 		speed = 0.4f;
 		maxSpeed = 0.4f;
