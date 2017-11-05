@@ -16,14 +16,17 @@ public class PowerScript : MonoBehaviour {
 			if (spriteRenderer.sprite == sprite1) {
 				spriteRenderer.sprite = sprite2;
 				allArounds ();
+				CameraShake.Shake(0.08f, 0.08f);
 			} else {
 				if (spriteRenderer.sprite == sprite2) {
 					allArounds ();
 					Destroy (this.gameObject);
+					CameraShake.Shake(0.08f, 0.08f);
 
 					}	else{
 					spriteRenderer.sprite = sprite1;
 					allArounds ();
+					CameraShake.Shake(0.08f, 0.08f);
 
 				}
 					
