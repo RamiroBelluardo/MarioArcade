@@ -84,9 +84,11 @@ public class EnemyController : MonoBehaviour {
 		isAround = !isAround;
 
 		if (isAround) {
+			maxSpeed = 0;
 			speed = 0;
-			//StartCoroutine ("tiempo");
+			StartCoroutine ("tiempo");
 		} else {speed = 0.4f;
+			maxSpeed = 0.4f;
 			speed = -speed;
 		}
 
@@ -99,6 +101,8 @@ public class EnemyController : MonoBehaviour {
 	IEnumerator tiempo (){
 		yield return new WaitForSeconds (0.5f);
 		isAround = false;
+		speed = 0.4f;
+		maxSpeed = 0.4f;
 
 	}
 
