@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 		public float speed = 2f;
 		public bool tocandoPiso;
 		public float fuerzaSalto = 6.5f;
-		public bool endPoint;
+		public GameObject game;
 
 
 
@@ -109,4 +109,20 @@ public class PlayerController : MonoBehaviour
 
 
 	}
+	void Death(){
+		UpdateState("MarioMuerto");
+		game.SendMessage ("End");
+		GetComponent<PlayerController>().enabled = false;
+		GetComponent<BoxCollider2D>().enabled = false;
+
 	}
+
+	void UpdateState(string state  = null){
+		if (state!=null)  {
+			myAnimator.Play (state);
+
+
+	}
+	}
+}
+		

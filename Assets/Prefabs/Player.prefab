@@ -122,7 +122,7 @@ MonoBehaviour:
   speed: 2
   tocandoPiso: 0
   fuerzaSalto: 3.5
-  endPoint: 0
+  game: {fileID: 0}
   myRigidbody2D: {fileID: 50272671014579672}
 --- !u!114 &114862720174791128
 MonoBehaviour:
