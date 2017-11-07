@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 212635392052186200}
   - component: {fileID: 61105550132731284}
   - component: {fileID: 95548501774397218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: aa001e00a6b262445a78929486cea4f6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 0.4
   speed: 0.4
+  isAround: 0
 --- !u!212 &212635392052186200
 SpriteRenderer:
   m_ObjectHideFlags: 1

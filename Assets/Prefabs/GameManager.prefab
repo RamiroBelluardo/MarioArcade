@@ -9,49 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1392906775839022}
+  m_RootGameObject: {fileID: 1109980428814628}
   m_IsPrefabParent: 1
---- !u!1 &1392906775839022
+--- !u!1 &1109980428814628
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4862689006619068}
-  - component: {fileID: 114152893703085930}
+  - component: {fileID: 4963066892907844}
+  - component: {fileID: 114602641699957578}
   m_Layer: 0
-  m_Name: Game
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4862689006619068
+--- !u!4 &4963066892907844
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392906775839022}
+  m_GameObject: {fileID: 1109980428814628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2938664, y: -0.54837376, z: 90}
+  m_LocalPosition: {x: -2.4520047, y: -1.0960248, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114152893703085930
+--- !u!114 &114602641699957578
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392906775839022}
+  m_GameObject: {fileID: 1109980428814628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 142b978eb83f8e744a1ee3c44cdb5cec, type: 3}
+  m_Script: {fileID: 11500000, guid: a2cadce289b594d409f09828c7018506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameState: 0
-  uiIddle: {fileID: 0}
-  uiEnd: {fileID: 0}
-  player: {fileID: 1038731361147516, guid: 0f69eeedbed669d46ba1ac20cc44483a, type: 2}
+  enemyPrefab: {fileID: 1846411039811706, guid: 2b66476291f6e4b42a06d9f871cabd27,
+    type: 2}
+  playerPrefab: {fileID: 1038731361147516, guid: 0f69eeedbed669d46ba1ac20cc44483a,
+    type: 2}

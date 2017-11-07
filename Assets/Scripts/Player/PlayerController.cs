@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 		public bool tocandoPiso;
 		public float fuerzaSalto = 6.5f;
 		public GameObject game;
+		private int score=0;
 
 
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
 		{
 			myRigidbody2D = GetComponent<Rigidbody2D>();
 			myAnimator = GetComponent<Animator>();
+		game = GameObject.FindGameObjectWithTag ("GameManager");
 			
 		}
 
@@ -33,7 +35,9 @@ public class PlayerController : MonoBehaviour
 		
 				Movement();
 				CheckBounds ();
-				
+		if (score == 3) {
+			game.SendMessage ("Winner");
+		}
 			}
 
 		private void Movement()
@@ -75,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
 			if (jump)
 			{
-				myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0); // Para que cancele la velocidad vertical y no se produzcan "saltos dobles"
+				
 				myRigidbody2D.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
 				jump = false;
 			}
@@ -111,18 +115,23 @@ public class PlayerController : MonoBehaviour
 	}
 	void Death(){
 		UpdateState("MarioMuerto");
-		game.SendMessage ("End");
+		game.SendMessage ("GameOver");
 		GetComponent<PlayerController>().enabled = false;
 		GetComponent<BoxCollider2D>().enabled = false;
 
 	}
 
 	void UpdateState(string state  = null){
-		if (state!=null)  {
+		if (state != null) {
 			myAnimator.Play (state);
 
 
+		}
 	}
-	}
+		void sumarScore(){
+
+		score+=1;
+		}
+
 }
 		

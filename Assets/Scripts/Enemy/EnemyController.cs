@@ -73,11 +73,17 @@ public class EnemyController : MonoBehaviour {
 		if (col.gameObject.tag == "Player") { 
 			if (isAround) {
 				Destroy (this.gameObject);
+				col.gameObject.SendMessage ("sumarScore");
 			} else {
 				col.gameObject.SendMessage ("Death");
 			}
 		}
+		{
+			if (col.gameObject.tag == "Enemy") { 
+				speed = -speed;
+			}
 
+		}
 	}
 
 	void Around(){
