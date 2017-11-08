@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloatScript : MonoBehaviour {
+public class FloorScript : MonoBehaviour {
 
 	public GameObject anterior;
 	public GameObject posterior;
@@ -14,14 +14,14 @@ public class FloatScript : MonoBehaviour {
 			transform.position = new Vector3 (transform.position.x, transform.position.y + 0.05f, transform.position.z);
 			StartCoroutine ("tiempo");
 
-			/*if (anterior != null) {
+			if (anterior != null) {
 				anterior.transform.position = new Vector3 (anterior.transform.position.x, anterior.transform.position.y + 0.025f, anterior.transform.position.z);
 				StartCoroutine ("tiempoAnterior");
 			}
 			if (posterior != null) {
 				posterior.transform.position = new Vector3 (posterior.transform.position.x, posterior.transform.position.y + 0.025f, posterior.transform.position.z);
 				StartCoroutine ("tiempoPosterior");
-			}*/
+			}
 		
 		} 
 
