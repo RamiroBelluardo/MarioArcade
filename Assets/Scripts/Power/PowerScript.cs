@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerScript : MonoBehaviour {
 	public Sprite sprite1;
 	public Sprite sprite2;
+	public AudioSource touchSound;
 
 
 
@@ -14,16 +15,19 @@ public class PowerScript : MonoBehaviour {
 		{ 
 			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer> ();
 			if (spriteRenderer.sprite == sprite1) {
+				touchSound.Play ();
 				spriteRenderer.sprite = sprite2;
 				allArounds ();
 				CameraShake.Shake(0.08f, 0.08f);
 			} else {
 				if (spriteRenderer.sprite == sprite2) {
 					allArounds ();
+					touchSound.Play ();
 					Destroy (this.gameObject);
 					CameraShake.Shake(0.08f, 0.08f);
 
 					}	else{
+					touchSound.Play ();
 					spriteRenderer.sprite = sprite1;
 					allArounds ();
 					CameraShake.Shake(0.08f, 0.08f);

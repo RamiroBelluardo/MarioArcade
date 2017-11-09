@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnerManager : MonoBehaviour {
 	public GameObject enemyPrefab;
 	public GameObject playerPrefab;
+	public AudioSource newSound;
 
 	int enemyCount=0;
 	float yPos = 0.214f;
@@ -30,6 +31,7 @@ public class SpawnerManager : MonoBehaviour {
 	public void spawnEnemy() {
 		if (playerCount < 1) {
 			Instantiate (playerPrefab, new Vector3 (xPosPlayer, yPosPlayer, 0f), Quaternion.identity);
+			newSound.Play ();
 			playerCount = 1;
 		}
 		if (enemyCount < 3) {

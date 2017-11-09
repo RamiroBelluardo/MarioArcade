@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
 		public float fuerzaSalto = 3f;
 		public GameObject game;
 		private int score=0;
+		public AudioSource jumpSound;
+		public AudioSource dieSound;
+		
+		
+
 
 
 
@@ -80,9 +85,10 @@ public class PlayerController : MonoBehaviour
 
 			if (jump)
 			{
-			
+			jumpSound.Play ();
 			myRigidbody2D.velocity = new Vector2(limiteVelocidad, myRigidbody2D.velocity.y);
 				myRigidbody2D.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+
 				jump = false;
 			}
 		}
@@ -117,6 +123,7 @@ public class PlayerController : MonoBehaviour
 	}
 	void Death(){
 		UpdateState("MarioMuerto");
+		dieSound.Play ();
 		game.SendMessage ("GameOver");
 		GetComponent<PlayerController>().enabled = false;
 		GetComponent<BoxCollider2D>().enabled = false;
