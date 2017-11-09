@@ -85,12 +85,15 @@ public class EnemyController : MonoBehaviour {
 				col.gameObject.SendMessage ("Death");
 			}
 		}
-		{
+	}
+	private void isTriggerEnter2D(Collider2D col){
+
+
 			if (col.gameObject.tag == "Enemy") { 
 				speed = -speed;
 			}
 
-		}
+
 	}
 
 	void Around(){

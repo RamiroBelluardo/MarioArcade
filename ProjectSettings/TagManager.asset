@@ -19,7 +19,7 @@ TagManager:
   - 
   - Enemy
   - Player
-  - 
+  - Coin
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Coin
+    uniqueID: 1117051331
     locked: 0
