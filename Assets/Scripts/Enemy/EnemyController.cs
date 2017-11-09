@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	public bool  isAround;
 	private Animator myAnimator;
+	public GameObject coin;
 
 	void Start () {
 
@@ -77,6 +78,9 @@ public class EnemyController : MonoBehaviour {
 			if (isAround) {
 				GetComponent<BoxCollider2D> ().enabled = false;
 				col.gameObject.SendMessage ("sumarScore");
+				Instantiate(coin, transform.position, Quaternion.identity);
+				Rigidbody2D coinrbd=coin.GetComponent<Rigidbody2D>();
+				coinrbd.AddForce(new Vector2(Random.Range(3, -3), 7), ForceMode2D.Impulse);
 			} else {
 				col.gameObject.SendMessage ("Death");
 			}
