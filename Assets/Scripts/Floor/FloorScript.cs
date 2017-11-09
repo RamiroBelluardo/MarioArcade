@@ -16,10 +16,20 @@ public class FloorScript : MonoBehaviour {
 
 			if (anterior != null) {
 				anterior.transform.position = new Vector3 (anterior.transform.position.x, anterior.transform.position.y + 0.025f, anterior.transform.position.z);
+
+				BoxCollider2D[] coll = anterior.GetComponents<BoxCollider2D> ();
+				foreach(BoxCollider2D col1 in coll) {
+					col1.GetComponent<BoxCollider2D>().enabled = false;
+
+				}
 				StartCoroutine ("tiempoAnterior");
 			}
 			if (posterior != null) {
 				posterior.transform.position = new Vector3 (posterior.transform.position.x, posterior.transform.position.y + 0.025f, posterior.transform.position.z);
+				BoxCollider2D[] coll = posterior.GetComponents<BoxCollider2D> ();
+				foreach(BoxCollider2D col1 in coll) {
+					col1.GetComponent<BoxCollider2D>().enabled = false;
+				}
 				StartCoroutine ("tiempoPosterior");
 			}
 		
@@ -45,15 +55,22 @@ public class FloorScript : MonoBehaviour {
 	}
 	IEnumerator tiempoAnterior (){
 		yield return new WaitForSeconds (0.3f);
-		anterior.transform.position=new Vector3(anterior.transform.position.x, anterior.transform.position.y-0.025f, anterior.transform.position.z);
+		anterior.transform.position = new Vector3 (anterior.transform.position.x, anterior.transform.position.y - 0.025f, anterior.transform.position.z);
+		BoxCollider2D[] coll = anterior.GetComponents<BoxCollider2D> ();
+		foreach (BoxCollider2D col1 in coll) {
+			col1.GetComponent<BoxCollider2D> ().enabled = true;
 
+		}
 	}
 	IEnumerator tiempoPosterior (){
 		yield return new WaitForSeconds (0.3f);
 		posterior.transform.position=new Vector3(posterior.transform.position.x, posterior.transform.position.y-0.025f, posterior.transform.position.z);
+			BoxCollider2D[] coll = posterior.GetComponents<BoxCollider2D> ();
+			foreach(BoxCollider2D col1 in coll) {
+				col1.GetComponent<BoxCollider2D>().enabled = true;
 
 	}
 
 
 }
-
+}
