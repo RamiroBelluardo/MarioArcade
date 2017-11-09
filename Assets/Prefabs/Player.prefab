@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbd34c6029f5848b604d39ac46e09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3.2
-  speed: 3.2
-  tocandoPiso: 1
+  maxSpeed: 3
+  speed: 3
+  tocandoPiso: 0
   fuerzaSalto: 3.4
   game: {fileID: 0}
   myRigidbody2D: {fileID: 50085373368100250}

@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
 			if (jump)
 			{
-				
+			myRigidbody2D.velocity = new Vector2(limiteVelocidad, myRigidbody2D.velocity.y);
 				myRigidbody2D.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
 				jump = false;
 			}
