@@ -66,13 +66,16 @@ public class EnemyController : MonoBehaviour {
 				transform.position = new Vector2 (-3.9199f, transform.position.y);
 			}
 
-
+		if (transform.position.y < -2.01464f) {
+			Destroy (this.gameObject);
+		}
+			
 		}
 
 	private void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "Player") { 
 			if (isAround) {
-				Destroy (this.gameObject);
+				GetComponent<BoxCollider2D> ().enabled = false;
 				col.gameObject.SendMessage ("sumarScore");
 			} else {
 				col.gameObject.SendMessage ("Death");

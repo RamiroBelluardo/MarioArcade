@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-		public float maxSpeed = 5f;
-		public float speed = 2f;
+		public float maxSpeed = 3f;
+		public float speed = 3f;
 		public bool tocandoPiso;
-		public float fuerzaSalto = 6.5f;
+		public float fuerzaSalto = 3f;
 		public GameObject game;
 		private int score=0;
 
@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
 			// Clamp toma un valor y le aplica un filtro (un valor mínimo y un valor máximo)
 			float limiteVelocidad = Mathf.Clamp(myRigidbody2D.velocity.x, -maxSpeed, maxSpeed);
+			
 			myRigidbody2D.velocity = new Vector2(limiteVelocidad, myRigidbody2D.velocity.y);
 
 		if (Input.GetKey(KeyCode.RightArrow))
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
 			if (jump)
 			{
+			
 			myRigidbody2D.velocity = new Vector2(limiteVelocidad, myRigidbody2D.velocity.y);
 				myRigidbody2D.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
 				jump = false;
