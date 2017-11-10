@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 	
-	public float maxSpeed=1f ;
-	public float speed=1f ;
+	public float maxSpeed=0.2f ;
+	public float speed=0.2f ;
 	private Rigidbody2D rb2d;
 	public bool  isAround;
 	private Animator myAnimator;
 	public GameObject coin;
+	public bool enemy2;
 
 	void Start () {
 
@@ -46,6 +47,7 @@ public class EnemyController : MonoBehaviour {
 		//Chequear Tubos inferiores
 		myAnimator.SetFloat("Speed", Mathf.Abs(speed));
 		myAnimator.SetBool("isAround", isAround);
+		myAnimator.SetBool ("enemy2", enemy2);
 		if (transform.position.x< -3.776f && transform.position.y< -1.807253f){
 			speed = -speed;
 			transform.position = new Vector2 (-3.897f, 0.21f);
@@ -103,9 +105,16 @@ public class EnemyController : MonoBehaviour {
 			maxSpeed = 0;
 			speed = 0;
 			StartCoroutine ("tiempo");
-		} else {speed = 0.4f;
-			maxSpeed = 0.4f;
-			speed = -speed;
+		} else {
+			if (enemy2) {
+				speed = 0.2f;
+				maxSpeed = 0.2f;
+				speed = -speed;
+			} else {
+				speed = 0.4f;
+				maxSpeed = 0.4f;
+				speed = -speed;
+			}
 		}
 
 	}
@@ -119,7 +128,7 @@ public class EnemyController : MonoBehaviour {
 		isAround = false;
 		speed = 0.4f;
 		maxSpeed = 0.4f;
-
+		enemy2 = true;
 	}
 
 	}

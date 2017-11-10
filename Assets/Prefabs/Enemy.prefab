@@ -117,10 +117,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abfd07c8f4a9694c821f5ef95f206c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.4
-  speed: 0.4
+  maxSpeed: 0.2
+  speed: 0.2
   isAround: 0
   coin: {fileID: 1226892936865980, guid: c9adf90c367ffcf42a5e712f45dea953, type: 2}
+  enemy2: 0
 --- !u!212 &212635392052186200
 SpriteRenderer:
   m_ObjectHideFlags: 1
