@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnerManager : MonoBehaviour {
 	public GameObject enemyPrefab;
 	public GameObject playerPrefab;
 	public AudioSource newSound;
+
+
 
 	int enemyCount=0;
 	float yPos = 0.214f;
@@ -13,9 +16,15 @@ public class SpawnerManager : MonoBehaviour {
 	float  xPosPlayer=-2.37737f;
 	float yPosPlayer=0.07314181f;
 	int playerCount = 0;
+
+
+
+
+
 	 void Start() {
 		
-		InvokeRepeating ("spawnEnemy", 1f, 6f);
+		InvokeRepeating ("spawnEnemy", 0, 6f);
+
 		}
 
 
@@ -26,6 +35,7 @@ public class SpawnerManager : MonoBehaviour {
 	void Update ()
 	{
 		
+
 	}
 
 	public void spawnEnemy() {
@@ -62,6 +72,9 @@ public class SpawnerManager : MonoBehaviour {
 		Destroy (player);
 
 	}
+
+
 }
+
 
 	

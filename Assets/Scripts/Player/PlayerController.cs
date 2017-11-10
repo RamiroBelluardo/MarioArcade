@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour
 		public float speed = 3f;
 		public bool tocandoPiso;
 		public float fuerzaSalto = 3f;
-		public GameObject game;
-		private int score=0;
+		public GameManager game;
+		public int score=0;
 		public AudioSource jumpSound;
 		public AudioSource dieSound;
+		
 		
 		
 
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
 		{
 			myRigidbody2D = GetComponent<Rigidbody2D>();
 			myAnimator = GetComponent<Animator>();
-		game = GameObject.FindGameObjectWithTag ("GameManager");
+
 			
 		}
 
@@ -137,10 +138,10 @@ public class PlayerController : MonoBehaviour
 
 		}
 	}
-		void sumarScore(){
-
+	public void sumarScore(){
 		score+=1;
 		}
+
 
 }
 		

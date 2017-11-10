@@ -6,15 +6,22 @@ public class GameManager : MonoBehaviour {
 
     
 
+
     [SerializeField]
 	SpawnerManager enemySpawnerScript;
 
 	public Canvas uiIddle;
 	public Canvas uiEnd;
 	public Canvas uiWin;
+
 	public bool End;
 	public bool Win;
-    private void FixedUpdate()
+	public GameObject player;
+
+	private void FixedUpdate()
+
+
+
 	 	 {
 			if (Input.GetMouseButtonDown (0)) {
 				SetEnemySpawner (true);
@@ -23,6 +30,7 @@ public class GameManager : MonoBehaviour {
 				uiWin.enabled = false;
 				End = false;
 				Win = false;
+
 			}
 		if (End == true) {
 			uiEnd.enabled = true;
@@ -37,6 +45,7 @@ public class GameManager : MonoBehaviour {
 
 		}
 		}
+
 	
     public void GameOver()
     {
@@ -54,15 +63,18 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void Start()
-	{
+	{	
+		
 		End = false;
 		Win = false;
+
 	}
 
 	private void SetEnemySpawner(bool b){
 		enemySpawnerScript.gameObject.SetActive(b);
 	
 	}
+
 
 
 

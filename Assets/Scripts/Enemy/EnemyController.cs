@@ -80,9 +80,7 @@ public class EnemyController : MonoBehaviour {
 			if (isAround) {
 				GetComponent<BoxCollider2D> ().enabled = false;
 				col.gameObject.SendMessage ("sumarScore");
-				Instantiate(coin, transform.position, Quaternion.identity);
-				Rigidbody2D coinrbd=coin.GetComponent<Rigidbody2D>();
-				coinrbd.AddForce(new Vector2(Random.Range(3, -3), 7), ForceMode2D.Impulse);
+			
 			} else {
 				col.gameObject.SendMessage ("Death");
 			}
@@ -107,12 +105,12 @@ public class EnemyController : MonoBehaviour {
 			StartCoroutine ("tiempo");
 		} else {
 			if (enemy2) {
-				speed = 0.2f;
-				maxSpeed = 0.2f;
-				speed = -speed;
-			} else {
 				speed = 0.4f;
 				maxSpeed = 0.4f;
+				speed = -speed;
+			} else {
+				speed = 0.2f;
+				maxSpeed = 0.2f;
 				speed = -speed;
 			}
 		}
