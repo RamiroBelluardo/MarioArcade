@@ -58,7 +58,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -291,10 +291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbd34c6029f5848b604d39ac46e09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
-  speed: 3
+  maxSpeed: 8
+  speed: 15
   tocandoPiso: 1
-  fuerzaSalto: 3.4
+  fuerzaSalto: 5.5
   game: {fileID: 0}
   score: 0
   jumpSound: {fileID: 82955985636338876}

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 		public float speed = 3f;
 		public bool tocandoPiso;
 		public float fuerzaSalto = 3f;
-		public GameManager game;
+		public GameObject game;
 		public int score=0;
 		public AudioSource jumpSound;
 		public AudioSource dieSound;
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 		{
 			myRigidbody2D = GetComponent<Rigidbody2D>();
 			myAnimator = GetComponent<Animator>();
+		game = GameObject.FindGameObjectWithTag ("GameManager");
 
 			
 		}
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
 
 			// Clamp toma un valor y le aplica un filtro (un valor mínimo y un valor máximo)
-			float limiteVelocidad = Mathf.Clamp(myRigidbody2D.velocity.x, -maxSpeed, maxSpeed);
+			float limiteVelocidad = Mathf.Clamp(myRigidbody2D.velocity.x, -1, 1);
 			
 			myRigidbody2D.velocity = new Vector2(limiteVelocidad, myRigidbody2D.velocity.y);
 

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 
 	public bool End;
 	public bool Win;
-	public GameObject player;
+
 
 	private void FixedUpdate()
 

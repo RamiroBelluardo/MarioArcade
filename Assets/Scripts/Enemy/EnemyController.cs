@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 	
-	public float maxSpeed=0.2f ;
+	public float maxSpeed;
 	public float speed=0.2f ;
 	private Rigidbody2D rb2d;
 	public bool  isAround;
 	private Animator myAnimator;
 	public GameObject coin;
 	public bool enemy2;
+	public AudioSource soundDeath;
 
 	void Start () {
 
@@ -33,7 +34,7 @@ public class EnemyController : MonoBehaviour {
 			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 
 		}
-		if (speed < 0.1f) {
+		if (speed < 0) {
 			transform.localScale = new Vector3 (-1f, 1f, 1f);
 			//transform.GetChild(0).localScale= new Vector3(-1f, 1f, 1f);
 		}
@@ -80,17 +81,20 @@ public class EnemyController : MonoBehaviour {
 			if (isAround) {
 				GetComponent<BoxCollider2D> ().enabled = false;
 				col.gameObject.SendMessage ("sumarScore");
+				soundDeath.Play ();
+
+
 			
 			} else {
 				col.gameObject.SendMessage ("Death");
 			}
 		}
 	}
-	private void isTriggerEnter2D(Collider2D col){
+	private void OnTriggerEnter2D(Collider2D col){
 
-
-			if (col.gameObject.tag == "Enemy") { 
+		if (col.gameObject.tag == "Enemy" &&  (Mathf.Abs((col.transform.position.y) - (transform.position.y) )<=0.1f )) {
 				speed = -speed;
+			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 			}
 
 
@@ -100,17 +104,21 @@ public class EnemyController : MonoBehaviour {
 		isAround = !isAround;
 
 		if (isAround) {
-			maxSpeed = 0;
-			speed = 0;
+
+			speed = 0f;
+			float limiteVelocidad = Mathf.Clamp (rb2d.velocity.x, 0, 0);
+			rb2d.velocity = new Vector2 (limiteVelocidad, rb2d.velocity.y);
+
 			StartCoroutine ("tiempo");
 		} else {
 			if (enemy2) {
-				speed = 0.4f;
-				maxSpeed = 0.4f;
+				speed = 0.6f;
+				rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 				speed = -speed;
 			} else {
 				speed = 0.2f;
-				maxSpeed = 0.2f;
+				rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
+				;
 				speed = -speed;
 			}
 		}
@@ -126,6 +134,7 @@ public class EnemyController : MonoBehaviour {
 		isAround = false;
 		speed = 0.4f;
 		maxSpeed = 0.4f;
+		rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 		enemy2 = true;
 	}
 

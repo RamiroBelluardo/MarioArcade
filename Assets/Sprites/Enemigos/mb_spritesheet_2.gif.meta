@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 92cf38b40394b9f449489964689f5288
-timeCreated: 1510252230
+timeCreated: 1510683544
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -121,7 +121,7 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 159
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -133,9 +133,9 @@ TextureImporter:
       name: mb_spritesheet_2_2
       rect:
         serializedVersion: 2
-        x: 30
+        x: 29
         y: 159
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -147,10 +147,10 @@ TextureImporter:
       name: mb_spritesheet_2_3
       rect:
         serializedVersion: 2
-        x: 43
+        x: 42
         y: 159
-        width: 11
-        height: 17
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
         serializedVersion: 2
         x: 55
         y: 159
-        width: 12
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -205,7 +205,7 @@ TextureImporter:
         serializedVersion: 2
         x: 89
         y: 159
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -219,7 +219,7 @@ TextureImporter:
         serializedVersion: 2
         x: 102
         y: 159
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -233,7 +233,7 @@ TextureImporter:
         serializedVersion: 2
         x: 115
         y: 159
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -247,7 +247,7 @@ TextureImporter:
         serializedVersion: 2
         x: 129
         y: 159
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -261,7 +261,7 @@ TextureImporter:
         serializedVersion: 2
         x: 142
         y: 159
-        width: 12
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -275,7 +275,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 141
-        width: 12
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -289,7 +289,7 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 141
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -301,9 +301,9 @@ TextureImporter:
       name: mb_spritesheet_2_14
       rect:
         serializedVersion: 2
-        x: 30
+        x: 29
         y: 141
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -317,7 +317,7 @@ TextureImporter:
         serializedVersion: 2
         x: 43
         y: 141
-        width: 11
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -331,7 +331,7 @@ TextureImporter:
         serializedVersion: 2
         x: 55
         y: 141
-        width: 12
+        width: 13
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -446,7 +446,7 @@ TextureImporter:
         width: 8
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -460,7 +460,7 @@ TextureImporter:
         width: 8
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,7 +474,7 @@ TextureImporter:
         width: 8
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
