@@ -292,10 +292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 8
-  speed: 15
+  speed: 13
   tocandoPiso: 1
   fuerzaSalto: 5.5
-  game: {fileID: 0}
+  game: {fileID: 1020557883178462, guid: bfd738198654c354cb96b5fdc7cf9110, type: 2}
   score: 0
   jumpSound: {fileID: 82955985636338876}
   dieSound: {fileID: 82390169930941210}
@@ -309,6 +309,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -324,6 +325,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

@@ -80,8 +80,10 @@ public class EnemyController : MonoBehaviour {
 		if (col.gameObject.tag == "Player") { 
 			if (isAround) {
 				GetComponent<BoxCollider2D> ().enabled = false;
-				col.gameObject.SendMessage ("sumarScore");
 				soundDeath.Play ();
+
+				Instantiate(coin, transform.position, Quaternion.identity);
+
 
 
 			
